@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&amp;family=Luxurious+Roman&amp;family=Quicksand:wght@300&amp;family=Varela+Round&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="container">
+        <p id="textbox">Beep Boop!</p>
+        <button id="next"><img id="next-img" src="next.png"></button>
+    </div>
+        <div>
+            <img id="jim" src="https://media.istockphoto.com/vectors/cute-white-robot-character-vector-vector-id1187576166?k=20&m=1187576166&s=170667a&w=0&h=rC6sIEv0-bJo4high7YB1qSWHd-vAqxSgsV7t9n87Vc=">
+        </div>
+    </div>
+    <script>
+        let page = 0;
+
+        let slides = ["Hello! \nMy name is Jim. ", 
+                        "Your friendly neighbourhood robot :D",
+                        "What is your name?", 
+                        "Nice to meet you, ",
+                        "Now that I know your name,", "I can find out a lot of things.",
+                        "I know your location...",
+                        "Your credit card information...",
+                        "and your mother's maiden name! :D",
+                        "Just kidding!",
+                        "Although I can't do much, I'm an example of AI!",
+                        "<b>Anything that can accept and interpret data, learn and use it is AI!",
+                        "Are you ready to learn more about AI? "
+                    ]
+
+        let name = "No Name";
+        document.getElementById("next").addEventListener("click", nextBtn);
+        
+        function nextBtn() {
+          console.log(page);
+          document.getElementById("textbox").innerHTML = slides[page];
+          
+          if(page == 2)
+          {
+            document.getElementById("textbox").innerHTML += 
+            '<br><input type="text" id="namebox"> <button onclick="submit()">✓</button>';
+          }
+
+          if(page == 3)
+          {
+            
+            document.getElementById("textbox").innerHTML += name +"!";
+          }
+          
+          if(page == 12)
+          {
+            document.getElementById("textbox").innerHTML += "<a class ='next-page' href='main-page.html'>\n→</a>";
+          }else{
+            page++;
+          }
+
+        }
+
+        function submit()
+        {
+            name = document.getElementById("namebox").value;
+        }
+    </script>
+
+</body>
+</html>
