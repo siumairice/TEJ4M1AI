@@ -167,7 +167,21 @@
     min-width: 70%;
 }
 
-#section-four{
+.ugh{
+    display:flex;
+    margin-right: 3rem;
+}
+
+.yeah{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.seven-img{
+    width:30rem;
+}
+
+#section-four, #section-seven{
     background-color: rgba(0, 0, 0, 0.87);;
     min-height: 300px;
     padding: 100px 20px;
@@ -214,7 +228,7 @@
 
 
 
-#section-five{
+#section-five, #section-eight{
     background-color: rgb(40, 107, 184);
     min-height: 300px;
     padding: 100px 100px;
@@ -230,6 +244,12 @@
     color: rgba(255, 255, 255, 0.671);
     display: flex;
     gap: 15px;
+    flex-wrap:wrap;
+    
+}
+.resources-links{
+    display:flex;
+    max-width: 85rem;
 }
 
 .res-link{
